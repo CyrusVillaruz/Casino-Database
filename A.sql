@@ -25,8 +25,7 @@ IF DB_ID ('CasinoDatabase') IS NOT NULL
 
 CREATE DATABASE CasinoDatabase;
 
-
-
+USE CasinoDatabase;
 
 CREATE TABLE SKILLS (
     SKILL_ID INT NOT NULL UNIQUE,
