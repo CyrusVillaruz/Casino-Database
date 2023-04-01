@@ -26,7 +26,7 @@ INSERT INTO EMPLOYEE_ROLE VALUES ('Floor Supervisor', 'The Floor Supervisor is r
                                                       'guests and employees and ensuring superior guest service. ' +
                                                       'They conduct pre-shift meetings with slot attendants and schedule ' +
                                                       'mandatory regulatory online certification/re-certification for them.');
-INSERT INTO EMPLOYEE_ROLE VALUES ('Slot Attendance', 'Slot Attendance is responsible for providing customer ' +
+INSERT INTO EMPLOYEE_ROLE VALUES ('Slot Attendance', 'The Slot Attendance is responsible for providing customer ' +
                                                      'service in a casino''s slot machine section. ' +
                                                      'Their responsibilities include ensuring that slot ' +
                                                      'machines are functioning properly, promoting special ' +
@@ -42,4 +42,40 @@ INSERT INTO EMPLOYEE_ROLE VALUES ('Human Resources', 'The Human Resources depart
                                                         'of employment to departing employees, and tracking vacation ' +
                                                         'and sick leave. It may also handle payroll.');
 
-SELECT * FROM EMPLOYEE_ROLE;
+INSERT INTO SKILLS VALUES ('Gambling Practices');
+INSERT INTO SKILLS VALUES ('Customer Service');
+INSERT INTO SKILLS VALUES ('Gaming Regulations and Laws');
+INSERT INTO SKILLS VALUES ('Conflict Resolution');
+INSERT INTO SKILLS VALUES ('Security and Safety Procedures');
+INSERT INTO SKILLS VALUES ('Emergency Protocols and First Aid');
+INSERT INTO SKILLS VALUES ('Alcohol Awareness');
+INSERT INTO SKILLS VALUES ('Fraud Detection and Prevention');
+INSERT INTO SKILLS VALUES ('Accounting');
+INSERT INTO SKILLS VALUES ('Anti-Money Laundering Laws and Procedures');
+
+INSERT INTO SECTION VALUES ('NORTH');
+INSERT INTO SECTION VALUES ('SOUTH');
+INSERT INTO SECTION VALUES ('EAST');
+INSERT INTO SECTION VALUES ('WEST');
+
+INSERT INTO INVENTORY VALUES ('Uniform', 20.0, 15);
+INSERT INTO INVENTORY VALUES ('Deck of Playing Cards', 5.0, 20);
+INSERT INTO INVENTORY VALUES ('Gaming Chips', 1.0, 100);
+INSERT INTO INVENTORY VALUES ('Security Cameras', 100.0, 5);
+INSERT INTO INVENTORY VALUES ('First Aid Kit', 20.0, 25);
+INSERT INTO INVENTORY VALUES ('Dice', 2.0, 50);
+INSERT INTO INVENTORY VALUES ('Cash Registers', 100.0, 10);
+INSERT INTO INVENTORY VALUES ('Decorations', 65.0, 15);
+INSERT INTO INVENTORY VALUES ('Furniture', 100.0, 25);
+INSERT INTO INVENTORY VALUES ('Cleaning Supplies', 35.0, 30);
+
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-20', '09:00:00', '12:00:00', 7);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-20', '13:00:00', '16:00:00', 1);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-21', '09:00:00', '12:00:00', 3);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-21', '13:00:00', '16:00:00', 8);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-22', '09:00:00', '12:00:00', 5);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-22', '13:00:00', '16:00:00', 10);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-23', '09:00:00', '12:00:00', 2);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-23', '13:00:00', '16:00:00', 4);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-24', '09:00:00', '12:00:00', 9);
+INSERT INTO TRAINING_SESSION VALUES ('2023-3-24', '13:00:00', '16:00:00', 6);
