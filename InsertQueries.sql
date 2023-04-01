@@ -80,4 +80,24 @@ INSERT INTO TRAINING_SESSION VALUES ('2023-3-23', '13:45:00', '16:15:00', 4);
 INSERT INTO TRAINING_SESSION VALUES ('2023-3-24', '09:00:00', '11:30:00', 9);
 INSERT INTO TRAINING_SESSION VALUES ('2023-3-24', '13:30:00', '16:15:00', 6);
 
-INSERT INTO EMPLOYEE VALUES ('Tino', 'Tinia', '255 Turtle Street')
+INSERT INTO DEPARTMENT VALUES ('Administration');
+INSERT INTO DEPARTMENT VALUES ('Food and Beverage');
+INSERT INTO DEPARTMENT VALUES ('Housekeeping');
+INSERT INTO DEPARTMENT VALUES ('Marketing and Promotions');
+INSERT INTO DEPARTMENT VALUES ('Security');
+INSERT INTO DEPARTMENT VALUES ('Maintenance');
+INSERT INTO DEPARTMENT VALUES ('Entertainment');
+INSERT INTO DEPARTMENT VALUES ('Human Resources');
+INSERT INTO DEPARTMENT VALUES ('Finance');
+INSERT INTO DEPARTMENT VALUES ('Administration');
+
+INSERT INTO EMPLOYEE VALUES ('Turtino', 'Turtledino', '4444 Turtle Street', 'Turtinia City', 'Turtinia', 'A4N 3T1', '2004-04-19', '2023-3-31', NULL, NULL, 44, 44.44, 5, 2, 1, 1);
+INSERT INTO EMPLOYEE VALUES ('Jones', 'Bob', '123 Main St', 'Anytown', 'BC', 'A1B 2C3', '1985-03-12', '2023-03-31', NULL, NULL, 33, 22.50, 10, 5, 3, 3);
+INSERT INTO EMPLOYEE VALUES ('Smith', 'Samantha', '5678 Elm St', 'Sometown', 'BC', 'B4D 5E6', '1990-09-21', '2023-03-31', NULL, NULL, 25, 20.00, 8, 2, 1, 4);
+INSERT INTO EMPLOYEE VALUES ('Garcia', 'Luis', '9876 Maple Ave', 'Anytown', 'BC', 'C7F 8G9', '1979-12-25', '2023-03-31', NULL, NULL, 42, 35.00, 6, 9, 2, 2);
+INSERT INTO EMPLOYEE VALUES ('Nguyen', 'Trinh', '4321 Oak St', 'Sometown', 'BC', 'H1J 2K3', '1995-05-07', '2023-03-31', NULL, NULL, 28, 18.50, 4, 7, 10, 2);
+INSERT INTO EMPLOYEE VALUES ('Brown', 'Andrew', '5555 Cypress Ave', 'Anytown', 'BC', 'M3N 4P5', '1988-08-16', '2023-03-31', NULL, NULL, 31, 27.00, 7, 3, 8, 1);
+INSERT INTO EMPLOYEE VALUES ('Wang', 'Yan', '3216 Cedar St', 'Sometown', 'BC', 'R5T 6U7', '1992-11-02', '2023-03-31', NULL, NULL, 29, 24.50, 9, 4, 4, 4);
+INSERT INTO EMPLOYEE VALUES ('Chen', 'Jin', '8888 Pine Ave', 'Anytown', 'BC', 'V9W 1X2', '1980-02-14', '2023-03-31', NULL, NULL, 41, 33.00, 5, 1, 6, 3);
+INSERT INTO EMPLOYEE VALUES ('Lee', 'Kyung', '2468 Spruce Blvd', 'Sometown', 'BC', 'Y8Z 9A1', '1998-07-11', '2023-03-31', NULL, NULL, 23, 16.00, 3, 5, 9, 1);
+INSERT INTO EMPLOYEE VALUES ('Taylor', 'Lauren', '1357 Birch Rd', 'Anytown', 'BC', 'B2C 3D4', '1993-04-30', '2023-03-31', NULL, NULL, 28, 21.50, 4, 8, 2, 4);
