@@ -112,3 +112,14 @@ INSERT INTO WRITTEN_WARNING VALUES ('2022-09-30', 'Harassment', 'Employee made i
 INSERT INTO WRITTEN_WARNING VALUES ('2022-11-03', 'Poor performance', 'Employee has not met performance expectations', 9);
 INSERT INTO WRITTEN_WARNING VALUES ('2022-12-08', 'Misuse of company property', 'Employee used company equipment for personal use', 10);
 INSERT INTO WRITTEN_WARNING VALUES ('2023-01-13', 'Safety violation', 'Employee did not follow safety protocols', 2);
+
+INSERT INTO CERTIFICATION VALUES ('Responsible Gambling', '2023-12-31', 'EMPLOYEE A');
+INSERT INTO CERTIFICATION VALUES ('Anti-Money Laundering', '2024-05-31', 'EMPLOYEE B');
+INSERT INTO CERTIFICATION VALUES ('Food Safe', '2025-08-31', 'EMPLOYEE C');
+INSERT INTO CERTIFICATION VALUES ('Serving It Right', '2024-10-31', 'EMPLOYEE D');
+INSERT INTO CERTIFICATION VALUES ('Occupational First Aid Level 1', '2026-03-31', 'EMPLOYEE E');
+INSERT INTO CERTIFICATION VALUES ('WHMIS', '2023-11-30', 'EMPLOYEE F');
+INSERT INTO CERTIFICATION VALUES ('Respectful Workplace', '2025-04-30', 'EMPLOYEE G');
+INSERT INTO CERTIFICATION VALUES ('Problem Gambling', '2024-09-30', 'EMPLOYEE H');
+INSERT INTO CERTIFICATION VALUES ('Crisis Management', '2023-12-31', 'EMPLOYEE I');
+INSERT INTO CERTIFICATION VALUES ('Code of Conduct', '2025-06-30', 'EMPLOYEE J');
