@@ -101,3 +101,14 @@ INSERT INTO EMPLOYEE VALUES ('Wang', 'Yan', '3216 Cedar St', 'Sometown', 'BC', '
 INSERT INTO EMPLOYEE VALUES ('Chen', 'Jin', '8888 Pine Ave', 'Anytown', 'BC', 'V9W 1X2', '1980-02-14', '2023-03-31', NULL, NULL, 41, 33.00, 5, 1, 6, 3);
 INSERT INTO EMPLOYEE VALUES ('Lee', 'Kyung', '2468 Spruce Blvd', 'Sometown', 'BC', 'Y8Z 9A1', '1998-07-11', '2023-03-31', NULL, NULL, 23, 16.00, 3, 5, 9, 1);
 INSERT INTO EMPLOYEE VALUES ('Taylor', 'Lauren', '1357 Birch Rd', 'Anytown', 'BC', 'B2C 3D4', '1993-04-30', '2023-03-31', NULL, NULL, 28, 21.50, 4, 8, 2, 4);
+
+INSERT INTO WRITTEN_WARNING VALUES ('2022-01-01', 'Tardiness', 'Employee was 15 minutes late to their shift', 2);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-03-05', 'Failure to follow dress code', 'Employee was not wearing proper uniform', 3);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-04-10', 'Insubordination', 'Employee refused to follow supervisor instructions', 4);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-05-15', 'Excessive absences', 'Employee has called in sick multiple times without proper documentation', 5);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-07-20', 'Customer complaint', 'Employee was rude to a customer', 6);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-08-25', 'Violence in the workplace', 'Employee got into a physical altercation with another employee', 7);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-09-30', 'Harassment', 'Employee made inappropriate comments towards a coworker', 8);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-11-03', 'Poor performance', 'Employee has not met performance expectations', 9);
+INSERT INTO WRITTEN_WARNING VALUES ('2022-12-08', 'Misuse of company property', 'Employee used company equipment for personal use', 10);
+INSERT INTO WRITTEN_WARNING VALUES ('2023-01-13', 'Safety violation', 'Employee did not follow safety protocols', 2);
