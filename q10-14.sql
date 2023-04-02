@@ -1,0 +1,66 @@
+USE CasinoDatabase;
+GO
+
+
+SELECT * FROM Employee
+
+
+
+--Question 10
+--Number of sick days an employee has available
+SELECT EMP_SICK_DAYS_ENTITLEMENT
+FROM EMPLOYEE
+WHERE EMP_ID = 1;
+
+
+--Question 11
+--Number of vacation days an employee has available
+SELECT EMP_VACATION_ENTITLEMENT
+FROM EMPLOYEE
+WHERE EMP_ID = 1;
+
+--Question 12
+
+--Number of Male and Female employees
+SELECT COUNT(CASE WHEN EMP_GENDER = 'F' THEN 1 END) AS FEMALE_COUNT, 
+       COUNT(CASE WHEN EMP_GENDER = 'M' THEN 1 END) AS MALE_COUNT
+FROM EMPLOYEE;
+
+
+--Average age
+SELECT AVG(DATEDIFF(YEAR, EMP_DOB, GETDATE())) AS AVG_EMPLOYEE_AGE FROM EMPLOYEE;
+
+--Employees over 50 and under 30
+SELECT SUM(CASE WHEN DATEDIFF(YEAR, EMP_DOB, GETDATE()) > 50 THEN 1 ELSE 0 END) AS EMPLOYEES_OVER_50, 
+       SUM(CASE WHEN DATEDIFF(YEAR, EMP_DOB, GETDATE()) < 30 THEN 1 ELSE 0 END) AS EMPLOYEES_UNDER_30 
+FROM EMPLOYEE;
+
+
+--Question 13
+--List of employees who has the mandatory certification expiring in the next 6 weeks
+SELECT emp.EMP_FNAME, emp.EMP_LNAME, cert.CERT_NAME, emp_train_sess.TRAIN_EXPIRY_DATE
+FROM EMPLOYEE AS emp
+INNER JOIN EMP_TRAIN_SESSION AS emp_train_sess ON emp.EMP_ID = emp_train_sess.EMP_ID
+INNER JOIN CERTIFICATION AS cert ON emp_train_sess.TRAIN_ID = cert.CERT_CODE
+WHERE emp_train_sess.TRAIN_EXPIRY_DATE <= DATEADD(WEEK, 6, GETDATE())
+ORDER BY emp.EMP_LNAME, emp.EMP_FNAME;
+
+--Question 14
+
+SELECT e.EMP_ID, e.EMP_FNAME, e.EMP_LNAME, t.TRAIN_EXPIRY_DATE
+FROM EMPLOYEE e
+JOIN EMP_TRAIN_SESSION ets ON e.EMP_ID = ets.EMP_ID
+JOIN TRAINING_SESSION t ON ets.TRAIN_ID = t.TRAIN_ID
+WHERE t.TRAIN_EXPIRY_DATE <= CURRENT_DATE()
+
+
+
+
+
+
+
+
+
+
+
+

@@ -87,22 +87,22 @@ INSERT INTO DEPARTMENT (DEPT_NAME) VALUES ('Administration'),
 ('Food and Beverage'),
 ('Gaming');
 
-INSERT INTO EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_STREET, EMP_CITY, EMP_PROVINCE, EMP_ZIP, EMP_DOB, EMP_HIRE_DATE, EMP_FIRE_DATE, EMP_DEPART_DATE, EMP_LOCKER, EMP_PAY_RATE, EMP_VACATION_ENTITLEMENT, EMP_SICK_DAYS_ENTITLEMENT, DEPT_ID, ROLE_CODE) VALUES
-('John', 'Smith', '123 Main St', 'Toronto', 'Ontario', 'M1N 2P3', '1985-03-14', '2020-01-01', NULL, NULL, 1, 20.00, 10, 5, 1, 1),
-('Sarah', 'Johnson', '456 Maple Ave', 'Vancouver', 'British Columbia', 'V6B 2G2', '1990-06-22', '2018-06-01', NULL, NULL, 2, 25.00, 15, 5, 2, 2),
-('David', 'Lee', '789 Oak St', 'Montreal', 'Quebec', 'H4C 2S2', '1988-12-05', '2019-05-15', NULL, NULL, 3, 22.50, 12, 4, 1, 2),
-('Emily', 'Chen', '321 Elm Rd', 'Calgary', 'Alberta', 'T2N 1R5', '1995-09-30', '2021-02-15', NULL, NULL, 4, 18.00, 8, 3, 3, 1),
-('Michael', 'Wang', '654 Cedar Blvd', 'Halifax', 'Nova Scotia', 'B3H 1K8', '1992-11-12', '2017-01-01', NULL, NULL, 5, 30.00, 20, 6, 2, 1),
-('Turtino', 'Turtledino', '4444 Turtle Street', 'Turtinia City', 'Turtinia', 'A4N 3T1', '2004-04-19', '2023-3-31', NULL, NULL, 44, 44.44, 5, 2, 1, 1),
-('Jones', 'Bob', '123 Main St', 'Anytown', 'BC', 'A1B 2C3', '1985-03-12', '2023-03-31', NULL, NULL, 33, 22.50, 10, 5, 3, 3),
-('Smith', 'Samantha', '5678 Elm St', 'Sometown', 'BC', 'B4D 5E6', '1990-09-21', '2023-03-31', NULL, NULL, 25, 20.00, 8, 2, 1, 4),
-('Garcia', 'Luis', '9876 Maple Ave', 'Anytown', 'BC', 'C7F 8G9', '1979-12-25', '2023-03-31', NULL, NULL, 42, 35.00, 6, 9, 2, 2),
-('Nguyen', 'Trinh', '4321 Oak St', 'Sometown', 'BC', 'H1J 2K3', '1995-05-07', '2023-03-31', NULL, NULL, 28, 18.50, 4, 7, 10, 2),
-('Brown', 'Andrew', '5555 Cypress Ave', 'Anytown', 'BC', 'M3N 4P5', '1988-08-16', '2023-03-31', NULL, NULL, 31, 27.00, 7, 3, 8, 1),
-('Wang', 'Yan', '3216 Cedar St', 'Sometown', 'BC', 'R5T 6U7', '1992-11-02', '2023-03-31', NULL, NULL, 29, 24.50, 9, 4, 4, 4),
-('Chen', 'Jin', '8888 Pine Ave', 'Anytown', 'BC', 'V9W 1X2', '1980-02-14', '2023-03-31', NULL, NULL, 41, 33.00, 5, 1, 6, 3),
-('Lee', 'Kyung', '2468 Spruce Blvd', 'Sometown', 'BC', 'Y8Z 9A1', '1998-07-11', '2023-03-31', NULL, NULL, 23, 16.00, 3, 5, 9, 1),
-('Taylor', 'Lauren', '1357 Birch Rd', 'Anytown', 'BC', 'B2C 3D4', '1993-04-30', '2023-03-31', NULL, NULL, 28, 21.50, 4, 8, 2, 4);
+INSERT INTO EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_GENDER, EMP_STREET, EMP_CITY, EMP_PROVINCE, EMP_ZIP, EMP_DOB, EMP_HIRE_DATE, EMP_FIRE_DATE, EMP_DEPART_DATE, EMP_LOCKER, EMP_PAY_RATE, EMP_VACATION_ENTITLEMENT, EMP_SICK_DAYS_ENTITLEMENT, DEPT_ID, ROLE_CODE) VALUES
+('John', 'Smith', 'M', '123 Main St', 'Toronto', 'Ontario', 'M1N 2P3', '1985-03-14', '2020-01-01', NULL, NULL, 1, 20.00, 10, 5, 1, 1),
+('Sarah', 'Johnson', 'F', '456 Maple Ave', 'Vancouver', 'British Columbia', 'V6B 2G2', '1990-06-22', '2018-06-01', NULL, NULL, 2, 25.00, 15, 5, 2, 2),
+('David', 'Lee', 'M', '789 Oak St', 'Montreal', 'Quebec', 'H4C 2S2', '1988-12-05', '2019-05-15', NULL, NULL, 3, 22.50, 12, 4, 1, 2),
+('Emily', 'Chen', 'F', '321 Elm Rd', 'Calgary', 'Alberta', 'T2N 1R5', '1995-09-30', '2021-02-15', NULL, NULL, 4, 18.00, 8, 3, 3, 1),
+('Michael', 'Wang', 'M', '654 Cedar Blvd', 'Halifax', 'Nova Scotia', 'B3H 1K8', '1992-11-12', '2017-01-01', NULL, NULL, 5, 30.00, 20, 6, 2, 1),
+('Turtino', 'Turtledino', 'M', '4444 Turtle Street', 'Turtinia City', 'Turtinia', 'A4N 3T1', '2004-04-19', '2023-3-31', NULL, NULL, 44, 44.44, 5, 2, 1, 1),
+('Jones', 'Bob', 'M', '123 Main St', 'Anytown', 'BC', 'A1B 2C3', '1985-03-12', '2023-03-31', NULL, NULL, 33, 22.50, 10, 5, 3, 3),
+('Smith', 'Samantha', 'M', '5678 Elm St', 'Sometown', 'BC', 'B4D 5E6', '1990-09-21', '2023-03-31', NULL, NULL, 25, 20.00, 8, 2, 1, 4),
+('Garcia', 'Luis', 'F', '9876 Maple Ave', 'Anytown', 'BC', 'C7F 8G9', '1979-12-25', '2023-03-31', NULL, NULL, 42, 35.00, 6, 9, 2, 2),
+('Nguyen', 'Trinh', 'M', '4321 Oak St', 'Sometown', 'BC', 'H1J 2K3', '1995-05-07', '2023-03-31', NULL, NULL, 28, 18.50, 4, 7, 10, 2),
+('Brown', 'Andrew', 'M', '5555 Cypress Ave', 'Anytown', 'BC', 'M3N 4P5', '1988-08-16', '2023-03-31', NULL, NULL, 31, 27.00, 7, 3, 8, 1),
+('Wang', 'Yan', 'M', '3216 Cedar St', 'Sometown', 'BC', 'R5T 6U7', '1992-11-02', '2023-03-31', NULL, NULL, 29, 24.50, 9, 4, 4, 4),
+('Chen', 'Jin', 'M', '8888 Pine Ave', 'Anytown', 'BC', 'V9W 1X2', '1980-02-14', '2023-03-31', NULL, NULL, 41, 33.00, 5, 1, 6, 3),
+('Lee', 'Kyung', 'M', '2468 Spruce Blvd', 'Sometown', 'BC', 'Y8Z 9A1', '1998-07-11', '2023-03-31', NULL, NULL, 23, 16.00, 3, 5, 9, 1),
+('Taylor', 'Lauren', 'F', '1357 Birch Rd', 'Anytown', 'BC', 'B2C 3D4', '1993-04-30', '2023-03-31', NULL, NULL, 28, 21.50, 4, 8, 2, 4);
 
 INSERT INTO SCHEDULE (SCH_DATE, EMP_ID) VALUES
 ('2023-04-02', 1),
