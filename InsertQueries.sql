@@ -60,16 +60,17 @@ INSERT INTO EMPLOYEE_ROLE (ROLE_TITLE, ROLE_DESCRIPTION) VALUES
                     'of employment to departing employees, and tracking vacation ' +
                     'and sick leave. It may also handle payroll.');
 
-INSERT INTO CERTIFICATION (CERT_NAME, CERT_VALID_FOR, CERT_ISSUED_BY) VALUES ('Responsible Gambling', '2023-12-31', 'EMPLOYEE A'),
-('Anti-Money Laundering', '2024-05-31', 'EMPLOYEE B'),
-('Food Safe', '2025-08-31', 'EMPLOYEE C'),
-('Serving It Right', '2024-10-31', 'EMPLOYEE D'),
-('Occupational First Aid Level 1', '2026-03-31', 'EMPLOYEE E'),
-('WHMIS', '2023-11-30', 'EMPLOYEE F'),
-('Respectful Workplace', '2025-04-30', 'EMPLOYEE G'),
-('Problem Gambling', '2024-09-30', 'EMPLOYEE H'),
-('Crisis Management', '2023-12-31', 'EMPLOYEE I'),
-('Code of Conduct', '2025-06-30', 'EMPLOYEE J');
+INSERT INTO CERTIFICATION (CERT_NAME, CERT_VALID_FOR, CERT_ISSUED_BY) VALUES
+('Responsible Gambling', '2023-12-31', 'British Columbia Government'),
+('Anti-Money Laundering', '2024-05-31', 'British Columbia Government'),
+('Food Safe', '2025-08-31', 'British Columbia Government'),
+('Serving It Right', '2024-10-31', 'British Columbia Government'),
+('Occupational First Aid Level 1', '2026-03-31', 'British Columbia Government'),
+('WHMIS', '2023-11-30', 'British Columbia Government'),
+('Respectful Workplace', '2025-04-30', 'British Columbia Government'),
+('Problem Gambling', '2024-09-30', 'British Columbia Government'),
+('Crisis Management', '2023-12-31', 'British Columbia Government'),
+('Code of Conduct', '2023-04-30', 'British Columbia Government');
 
 INSERT INTO EMP_ROLE_CERT (ROLE_CODE, CERT_CODE) VALUES
 (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (2, 6), (2, 7), (2, 8), (2, 9), (2, 10),
@@ -128,7 +129,7 @@ INSERT INTO DEPARTMENT_HISTORY (HIST_START_DATE, HIST_END_DATE, DEPT_ID, EMP_ID,
 ('2023-03-12', '2023-03-19', 9, 9, 3),
 ('2023-03-19', '2023-03-31', 10, 10, 4);
 
-INSERT INTO TRAINING_SESSION (TRAIN_DATE, TRAIN_START_TIME, TRAIN_END_TIME, SKILL_ID) VALUES
+INSERT INTO TRAINING_SESSION (TRAIN_DATE, TRAIN_START_TIME, TRAIN_END_TIME, CERT_CODE) VALUES
 ('2023-3-20', '07:00:00', '12:00:00', 7),
 ('2023-3-20', '13:00:00', '16:00:00', 1),
 ('2023-3-21', '11:00:00', '13:00:00', 3),
@@ -141,17 +142,18 @@ INSERT INTO TRAINING_SESSION (TRAIN_DATE, TRAIN_START_TIME, TRAIN_END_TIME, SKIL
 ('2023-3-24', '13:30:00', '16:15:00', 6);
 
 INSERT INTO EMP_TRAIN_SESSION (TRAIN_ID, EMP_ID, EMP_TRAIN_ROLE, TRAIN_OUTCOME, TRAIN_EXPIRY_DATE) VALUES (1, 1, 'Trainer', 'Pass', '2023-03-20'),
-(2, 5, 'Trainer', 'Fail', '2023-03-20'),
+(2, 5, 'Trainer', 'Pass', '2023-03-20'),
 (3, 7, 'Trainee', 'Fail', '2023-03-20'),
 (4, 2, 'Trainee', 'Pass', '2023-03-20'),
 (5, 4, 'Trainer', 'Pass', '2023-03-20'),
 (6, 3, 'Trainee', 'Pass', '2023-03-20'),
 (7, 10, 'Trainee', 'Fail', '2023-03-20'),
 (8, 9, 'Trainer', 'Pass', '2023-03-20'),
-(9, 6, 'Trainer', 'Fail', '2023-03-20'),
+(9, 6, 'Trainer', 'Pass', '2023-03-20'),
 (10, 8, 'Trainee', 'Fail', '2023-03-20');
 
-INSERT INTO INVENTORY (INV_TITLE, INV_PRICE, INV_QNTY) VALUES ('Uniform', 20.0, 15),
+INSERT INTO INVENTORY (INV_TITLE, INV_PRICE, INV_QNTY) VALUES
+('Uniform', 20.0, 15),
 ('Deck of Playing Cards', 5.0, 20),
 ('Gaming Chips', 1.0, 100),
 ('Security Cameras', 100.0, 5),
@@ -174,7 +176,8 @@ INSERT INTO LEAVE (LEAVE_TYPE, LEAVE_START, LEAVE_END, LEAVE_COMMENTS, EMP_ID) V
 ('Sick', '2023-03-01', '2023-03-03', 'Sick day', 9),
 ('Vacation', '2023-03-15', '2023-03-20', 'Vacation in Hawaii', 10);
 
-INSERT INTO WRITTEN_WARNING (WW_DATE, WW_OFFENCE, WW_COMMENTS, EMP_ID) VALUES ('2022-01-01', 'Tardiness', 'Employee was 15 minutes late to their shift', 2),
+INSERT INTO WRITTEN_WARNING (WW_DATE, WW_OFFENCE, WW_COMMENTS, EMP_ID) VALUES
+('2022-01-01', 'Tardiness', 'Employee was 15 minutes late to their shift', 2),
 ('2022-03-05', 'Failure to follow dress code', 'Employee was not wearing proper uniform', 3),
 ('2022-04-10', 'Insubordination', 'Employee refused to follow supervisor instructions', 4),
 ('2022-05-15', 'Excessive absences', 'Employee has called in sick multiple times without proper documentation', 5),
@@ -186,8 +189,8 @@ INSERT INTO WRITTEN_WARNING (WW_DATE, WW_OFFENCE, WW_COMMENTS, EMP_ID) VALUES ('
 ('2023-01-13', 'Safety violation', 'Employee did not follow safety protocols', 2);
 
 INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SECT_CODE, EMP_ID, SCH_ID) VALUES
-('07:00:00', '11:30:00', 1, 1, 1),
-('11:30:00', '16:00:00', 1, 2, 2),
+('07:00:00', '11:45:00', 1, 1, 1),
+('11:45:00', '16:00:00', 1, 2, 2),
 ('16:00:00', '20:30:00', 2, 3, 3),
 ('20:30:00', '01:00:00', 2, 4, 4),
 ('07:00:00', '11:30:00', 2, 5, 5),
@@ -196,6 +199,14 @@ INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SECT_CODE, EMP_ID, SCH_ID) VALUES
 ('20:30:00', '01:00:00', 4, 8, 8),
 ('07:00:00', '11:30:00', 4, 9, 9),
 ('11:30:00', '16:00:00', 4, 10, 10);
+
+INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SECT_CODE, EMP_ID, SCH_ID) VALUES
+('08:00:00', '08:15:00', 1, 11, 1),
+('08:15:00', '09:15:00', 1, 1, 1),
+('09:15:00', '09:30:00', 1, 11, 1),
+('09:30:00', '10:30:00', 1, 1, 1),
+('10:30:00', '10:45:00', 1, 11, 1),
+('10:45:00', '11:45:00', 1, 1, 1);
 
 INSERT INTO SHIFT_INVENTORY (SHIFT_ID, INV_ID) VALUES
 (1, 1), -- Uniform
