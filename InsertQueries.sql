@@ -61,12 +61,12 @@ INSERT INTO EMPLOYEE_ROLE (ROLE_TITLE, ROLE_DESCRIPTION) VALUES
                     'and sick leave. It may also handle payroll.');
 
 INSERT INTO CERTIFICATION (CERT_NAME, CERT_VALID_FOR, CERT_ISSUED_BY) VALUES
-('Responsible Gambling', '2023-12-31', 'British Columbia Government'),
+('Responsible Gambling', '2023-01-20', 'British Columbia Government'),
 ('Anti-Money Laundering', '2024-05-31', 'British Columbia Government'),
 ('Food Safe', '2025-08-31', 'British Columbia Government'),
 ('Serving It Right', '2024-10-31', 'British Columbia Government'),
 ('Occupational First Aid Level 1', '2026-03-31', 'British Columbia Government'),
-('WHMIS', '2023-11-30', 'British Columbia Government'),
+('WHMIS', '2023-02-14', 'British Columbia Government'),
 ('Respectful Workplace', '2025-04-30', 'British Columbia Government'),
 ('Problem Gambling', '2024-09-30', 'British Columbia Government'),
 ('Crisis Management', '2023-12-31', 'British Columbia Government'),
@@ -89,7 +89,7 @@ INSERT INTO DEPARTMENT (DEPT_NAME) VALUES ('Administration'),
 ('Gaming');
 
 INSERT INTO EMPLOYEE (EMP_FNAME, EMP_LNAME, EMP_GENDER, EMP_STREET, EMP_CITY, EMP_PROVINCE, EMP_ZIP, EMP_DOB, EMP_HIRE_DATE, EMP_FIRE_DATE, EMP_DEPART_DATE, EMP_LOCKER, EMP_PAY_RATE, EMP_VACATION_ENTITLEMENT, EMP_SICK_DAYS_ENTITLEMENT, DEPT_ID, ROLE_CODE) VALUES
-('John', 'Smith', 'M', '123 Main St', 'Toronto', 'Ontario', 'M1N 2P3', '1985-03-14', '2020-01-01', NULL, NULL, 1, 20.00, 5, 5, 1, 1),
+('John', 'Smith', 'M', '123 Main St', 'Toronto', 'Ontario', 'M1N 2P3', '1965-03-14', '2020-01-01', NULL, NULL, 1, 20.00, 5, 5, 1, 1),
 ('Sarah', 'Johnson', 'F', '456 Maple Ave', 'Vancouver', 'British Columbia', 'V6B 2G2', '1990-06-22', '2018-06-01', NULL, NULL, 2, 25.00, 5, 5, 2, 2),
 ('David', 'Lee', 'M', '789 Oak St', 'Montreal', 'Quebec', 'H4C 2S2', '1988-12-05', '2019-05-15', NULL, NULL, 3, 22.50, 5, 5, 1, 2),
 ('Emily', 'Chen', 'F', '321 Elm Rd', 'Calgary', 'Alberta', 'T2N 1R5', '1995-09-30', '2021-02-15', NULL, NULL, 4, 18.00, 5, 5, 3, 1),
@@ -144,11 +144,11 @@ INSERT INTO TRAINING_SESSION (TRAIN_DATE, TRAIN_START_TIME, TRAIN_END_TIME, CERT
 ('2023-3-24', '13:30:00', '16:15:00', 6);
 
 INSERT INTO EMP_TRAIN_SESSION (TRAIN_ID, EMP_ID, EMP_TRAIN_ROLE, TRAIN_OUTCOME, TRAIN_EXPIRY_DATE) VALUES (1, 1, 'Trainer', 'Pass', '2023-03-20'),
-(2, 5, 'Trainer', 'Pass', '2023-03-20'),
-(3, 7, 'Trainee', 'Fail', '2023-03-20'),
-(4, 2, 'Trainee', 'Pass', '2023-03-20'),
-(5, 4, 'Trainer', 'Pass', '2023-03-20'),
-(6, 3, 'Trainee', 'Pass', '2023-03-20'),
+(2, 5, 'Trainer', 'Pass', '2022-03-20'),
+(3, 7, 'Trainee', 'Fail', '2022-03-20'),
+(4, 2, 'Trainee', 'Pass', '2022-03-20'),
+(5, 4, 'Trainer', 'Pass', '2022-03-20'),
+(6, 3, 'Trainee', 'Pass', '2022-03-20'),
 (7, 10, 'Trainee', 'Fail', '2023-03-20'),
 (8, 9, 'Trainer', 'Pass', '2023-03-20'),
 (9, 6, 'Trainer', 'Pass', '2023-03-20'),
@@ -191,35 +191,37 @@ INSERT INTO WRITTEN_WARNING (WW_DATE, WW_OFFENCE, WW_COMMENTS, EMP_ID) VALUES
 ('2023-01-13', 'Safety violation', 'Employee did not follow safety protocols', 2);
 
 INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SECT_CODE, EMP_ID, SCH_ID) VALUES
-('07:00:00', '11:45:00', 1, 1, 1),
-('11:45:00', '16:00:00', 1, 2, 2),
-('16:00:00', '20:30:00', 2, 3, 3),
-('20:30:00', '01:00:00', 2, 4, 4),
-('07:00:00', '11:30:00', 2, 5, 5),
-('11:30:00', '16:00:00', 3, 6, 6),
-('16:00:00', '20:30:00', 3, 7, 7),
-('20:30:00', '01:00:00', 4, 8, 8),
-('07:00:00', '11:30:00', 4, 9, 9),
-('11:30:00', '16:00:00', 4, 10, 10);
-
-INSERT INTO SHIFT (SHIFT_START, SHIFT_END, SECT_CODE, EMP_ID, SCH_ID) VALUES
-('08:00:00', '08:15:00', 1, 11, 1),
-('08:15:00', '09:15:00', 1, 1, 1),
-('09:15:00', '09:30:00', 1, 11, 1),
-('09:30:00', '10:30:00', 1, 1, 1),
-('10:30:00', '10:45:00', 1, 11, 1),
-('10:45:00', '11:45:00', 1, 1, 1);
+('2023-04-01 08:00:00', '2023-04-01 16:00:00', 1, 1, 1),
+('2023-04-01 17:00:00', '2023-04-01 01:00:00', 1, 2, 5),
+('2023-04-02 09:00:00', '2023-04-02 17:00:00', 1, 2, 6),
+('2023-04-02 10:00:00', '2023-04-02 18:00:00', 1, 2, 1),
+('2023-04-03 10:00:00', '2023-04-03 18:00:00', 2, 3, 2),
+('2023-04-04 11:00:00', '2023-04-04 19:00:00', 3, 4, 2),
+('2023-04-05 12:00:00', '2023-04-05 20:00:00', 4, 5, 3),
+('2023-04-06 13:00:00', '2023-04-06 21:00:00', 5, 6, 3),
+('2023-04-07 14:00:00', '2023-04-07 22:00:00', 4, 7, 4),
+('2023-04-08 15:00:00', '2023-04-08 23:00:00', 5, 8, 4),
+('2023-04-09 07:00:00', '2023-04-09 16:00:00', 4, 1, 5),
+('2023-04-10 01:00:00', '2023-04-10 23:00:00', 3, 10, 5),
+('2023-03-09 16:00:00', '2023-03-09 16:15:00', 4, 1, 5),
+('2023-03-10 16:00:00', '2023-03-10 16:30:00', 3, 10, 5),
+('2023-03-15 16:00:00', '2023-03-15 17:15:00', 2, 9, 5),
+('2023-04-12 16:00:00', '2023-04-12 16:31:00', 4, 10, 5),
+('2023-04-02 08:00:00', '2023-04-02 08:15:00', 1, 11, 1),
+('2023-04-03 08:15:00', '2023-04-03 09:15:00', 1, 11, 2),
+('2023-04-09 09:15:00', '2023-04-09 09:30:00', 1, 11, 1),
+('2023-03-09 09:15:00', '2023-03-09 09:30:00', 1, 11, 4),
+('2023-04-03 10:30:00', '2023-04-03 10:45:00', 1, 11, 1),
+('2023-03-09 09:15:00', '2023-03-09 09:15:00', 2, 11, 1);
 
 INSERT INTO SHIFT_INVENTORY (SHIFT_ID, INV_ID) VALUES
-(1, 1), -- Uniform
-(1, 2), -- Deck of Playing Cards
-(1, 3), -- Gaming Chips
-(1, 4), -- Security Cameras
-(2, 1), -- Uniform
-(2, 5), -- First Aid Kit
-(2, 6), -- Dice
-(2, 7), -- Cash Registers
-(3, 3), -- Gaming Chips
-(3, 8), -- Decorations
-(3, 9), -- Furniture
-(3, 10); -- Cleaning
+(1, 2),
+(1, 3),
+(1, 4),
+(2, 5),
+(2, 6),
+(2, 7),
+(3, 3),
+(3, 8),
+(3, 9),
+(3, 10);

@@ -1,5 +1,4 @@
 --Question 1: Number of hours each employee worked per week?
-
 SELECT 
     EMPLOYEE.EMP_ID, 
     EMPLOYEE.EMP_FNAME + ' ' + EMPLOYEE.EMP_LNAME AS EMP_NAME, 
